@@ -42,7 +42,7 @@ group :development do
 	gem 'capistrano'
 	gem 'capistrano-rails'
 	gem 'capistrano-bundler'
-	gem 'rvm1-capistrano3'
+	gem 'rvm1-capistrano3', require: nil
 	gem 'capistrano-passenger'
 end
 
@@ -54,7 +54,7 @@ group :test do
 	gem 'ci_reporter'
 	gem 'ci_reporter_rspec'
 end
-
+gem 'rake'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 

@@ -230,6 +230,7 @@ DEPENDENCIES
   jquery-rails
   mysql2
   rails (= 4.0.5)
+  rake
   rspec-its
   rspec-rails
   rvm1-capistrano3

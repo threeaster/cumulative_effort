@@ -1,11 +1,11 @@
-top
-session
-	create,new,destroy
 static
+	top
 	about
 	hot_to
 	contact
 	sitemap
+session
+	create,new,destroy
 user
 	show: 努力項目のリスト、コントロールパネル
 	create: 新規ユーザの作成 -> new
