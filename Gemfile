@@ -55,6 +55,8 @@ group :test do
 	gem 'ci_reporter_rspec'
 end
 gem 'rake'
+gem 'execjs'
+gem 'therubyracer'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
