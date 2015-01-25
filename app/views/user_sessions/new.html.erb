@@ -1,3 +1,11 @@
+<% if @user_session.errors.any? %>
+	<ul>
+		<% @user_session.errors.full_messages.each do |error| %>
+			<li><%= error %></li>
+		<% end %>
+	</ul>
+<% end %>
+
 <%= form_for @user_session do |f| %>
 	<fieldset>
 		<legend>ログイン</legend>
