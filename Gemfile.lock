@@ -196,6 +196,9 @@ GEM
     simplecov-rcov (0.2.3)
       simplecov (>= 0.4.1)
     slop (3.6.0)
+    spring (1.2.0)
+    spring-commands-rspec (1.0.2)
+      spring (>= 0.9.1)
     sprockets (2.12.3)
       hike (~> 1.2)
       multi_json (~> 1.0)
@@ -257,6 +260,7 @@ DEPENDENCIES
   sdoc
   simplecov
   simplecov-rcov
+  spring-commands-rspec
   therubyracer
   turbolinks
   uglifier (>= 1.3.0)
