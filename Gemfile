@@ -36,6 +36,7 @@ group :development, :test do
 	gem 'rspec-rails'
 	gem 'guard-rspec'
 	gem 'capybara'
+	gem 'spring-commands-rspec'
 end
 
 group :development do
@@ -53,10 +54,14 @@ group :test do
 	gem 'simplecov-rcov'
 	gem 'ci_reporter'
 	gem 'ci_reporter_rspec'
+	gem 'database_cleaner'
+	gem 'launchy'
 end
+
 gem 'rake'
 gem 'execjs'
 gem 'therubyracer'
+gem 'authlogic'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 

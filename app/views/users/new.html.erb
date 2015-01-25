@@ -1,0 +1,27 @@
+<% if @user.errors.any? %>
+	<ul>
+		<% @user.errors.full_messages.each do |error| %>
+			<li><%= error %></li>
+		<% end %>
+	</ul>
+<% end %>
+
+<%= form_for @user, url: users_path do |f| %>
+	<fieldset>
+		<legent>ユーザ登録</legent>
+		<p>
+			<%= f.label :name, 'ユーザ名' %>
+			<%= f.text_field :name %>
+		</p>
+		<p>
+			<%= f.label :password, 'パスワード' %>
+			<%= f.password_field :password %>
+		</p>
+		<p>
+			<%= f.label :password_confirmation, 'パスワード(確認)' %>
+			<%= f.password_field :password_confirmation %>
+		</p>
+
+		<%= f.submit '登録' %>
+	</fieldset>
+<% end %>

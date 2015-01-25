@@ -1,6 +1,10 @@
 CumulativeEffort::Application.routes.draw do
   get "static/top"
-
+  resources :users, only: [:create]
+  get 'signup' => 'users#new'
+  get 'login' => 'user_sessions#new'
+  delete 'logout' => 'user_sessions#destroy'
+  resources :user_sessions, only: [:create]
   root to: 'static#top'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
