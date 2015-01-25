@@ -1,0 +1,14 @@
+<%= form_for @user_session do |f| %>
+	<fieldset>
+		<legend>ログイン</legend>
+		<p>
+			<%= f.label :name, 'ユーザ名' %>
+			<%= f.text_field :name %>
+		</p>
+		<p>
+			<%= f.label :password, 'パスワード' %>
+			<%= f.password_field :password %>
+		</p>
+		<%= f.submit 'ログイン' %>
+	</fieldset>
+<% end %>

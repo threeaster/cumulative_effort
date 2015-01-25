@@ -57,6 +57,7 @@ end
 gem 'rake'
 gem 'execjs'
 gem 'therubyracer'
+gem 'authlogic'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
