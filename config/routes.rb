@@ -1,6 +1,6 @@
 CumulativeEffort::Application.routes.draw do
   get "static/top"
-  resources :users, only: [:create]
+  resources :users, only: [:create, :show]
   get 'signup' => 'users#new'
   get 'login' => 'user_sessions#new'
   delete 'logout' => 'user_sessions#destroy'
