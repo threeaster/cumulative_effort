@@ -17,6 +17,9 @@ role :db,  'deploy@localhost'
 
 server 'localhost', user: 'deploy', roles: %w{web app db}, my_property: :my_value
 
+set :deploy_to, '/var/www/rails/cumulative_effort'
+
+set :branch, 'master'
 
 # Custom SSH Options
 # ==================
