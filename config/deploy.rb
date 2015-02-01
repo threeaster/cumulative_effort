@@ -12,6 +12,8 @@ set :repo_url, '/var/lib/git/cumulative_effort.git'
 
 set :rvm_type, :system
 set :rvm1_ruby_version, '2.1.5'
+
+set :stages, %w(production staging)
 # Default value for :scm is :git
 # set :scm, :git
 
