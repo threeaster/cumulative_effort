@@ -1,0 +1,25 @@
+<% if @effort.errors.any? %>
+  <ul>
+    <% @effort.errors.full_messages.each do |error| %>
+      <li><%= error %></li>
+    <% end %>
+  </ul>
+<% end %>
+<%= form_for @effort, url: user_efforts_path(@current_user.id) do |f| %>
+  <fieldset>
+    <legent>努力項目の作成</legent>
+    <p>
+      <%= f.label :name, '名前' %>
+      <%= f.text_field :name %>
+    </p>
+    <p>
+      <%= f.label :effort_type, '種類' %>
+      <%= f.select :effort_type, @types %>
+    </p>
+    <p>
+      <%= f.label :unit, '単位' %>
+      <%= f.text_field :unit %>
+    </p>
+    <%= f.submit '作成' %>
+  </fieldset>
+<% end %>
