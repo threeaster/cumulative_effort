@@ -2,12 +2,14 @@ class UsersController < ApplicationController
 	skip_before_action :require_login, only: [:new, :create]
 	def new
 		@user = User.new
+		@current_user = current_user
 	end
 
 	def create
 		#up = user_params
 		#up.delete :password_confirmation
 		@user = User.new user_params
+		@current_user = current_user
 		if @user.save
 			redirect_to root_url
 		else

@@ -37,6 +37,10 @@ group :development, :test do
 	gem 'guard-rspec'
 	gem 'capybara'
 	gem 'spring-commands-rspec'
+	gem 'pry-rails'
+	gem 'pry-doc'
+	gem 'pry-byebug'
+	gem 'pry-stack_explorer'
 end
 
 group :development do

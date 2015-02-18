@@ -1,0 +1,5 @@
+<ul>
+<% @efforts.each do |effort| %>
+  <li><%= link_to effort.name, effort_path(effort.id) %></li>
+<% end %>
+</ul>
