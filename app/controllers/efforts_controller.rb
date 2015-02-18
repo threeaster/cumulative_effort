@@ -1,4 +1,8 @@
 class EffortsController < ApplicationController
+  def index
+    @efforts = Effort.where user: current_user
+  end
+
   def show
     @effort = Effort.find params['id']
   end
@@ -9,7 +13,7 @@ class EffortsController < ApplicationController
   end
 
   def create
-    @effort = Effort.new effort_params
+    @effort = Effort.new effort_params.merge(user: current_user)
     if @effort.save
       redirect_to root_path
     else
