@@ -1,4 +1,8 @@
 class EffortsController < ApplicationController
+  def show
+    @effort = Effort.find params['id']
+  end
+
   def new
   	  @effort = Effort.new
   	  @types = [['回数', 1], ['時間', 2], ['日数', 3]]
