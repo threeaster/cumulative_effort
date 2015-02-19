@@ -1,7 +1,9 @@
 CumulativeEffort::Application.routes.draw do
   get "static/top"
   resources :users, only: [:create, :show] do
-    resources :efforts, shallow: true
+    resources :efforts, shallow: true do
+      resources :histories, shallow: true
+    end
   end
   get 'signup' => 'users#new'
   get 'login' => 'user_sessions#new'

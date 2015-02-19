@@ -1,0 +1,14 @@
+<% if @history.errors.any? %>
+  <ul>
+    <% @history.errors.full_messages.each do |error| %>
+      <li><%= error %></li>
+    <% end %>
+  </ul>
+<% end %>
+<%= form_for @history, url: effort_histories_path(@effort_id) do |f| %>
+  <fieldset>
+    <%= f.label :quantity, '今日の努力' %>
+    <%= f.text_field :quantity %>
+  </fieldset>
+  <%= f.submit '記録' %>
+<% end %>
