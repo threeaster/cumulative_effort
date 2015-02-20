@@ -18,11 +18,26 @@ describe 'effor' do
     expect(all[0].user).to eq user
   end
 
-  it 'showページで個々のeffortを読むことができる' do
-    effort = create :effort_with_user
-    visit effort_path effort.id
-    should have_content effort.name
-    should have_content effort.unit
+  describe '#show' do
+    let(:effort){ create :effort_with_user }
+
+    it 'effort名前を確認できる' do
+      visit effort_path effort.id
+      should have_content effort.name
+      should have_content effort.unit
+    end
+
+    it 'これまでの努力の総量を単位付きで確認できる' do
+      History.create effort: effort, date: Date.today, quantity: 10
+      History.create effort: effort, date: Date.yesterday, quantity: 20
+      visit effort_path effort.id
+      should have_content '30回'
+    end
+
+    it '初期状態で0が表示される' do
+      visit effort_path effort.id
+      should have_content '0回'
+    end
   end
 
   describe '#index' do

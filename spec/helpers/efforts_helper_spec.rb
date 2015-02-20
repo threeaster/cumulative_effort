@@ -11,5 +11,15 @@ require 'rails_helper'
 #   end
 # end
 RSpec.describe EffortsHelper, :type => :helper do
-  pending "add some examples to (or delete) #{__FILE__}"
+  describe '#simple_num' do
+    it 'n.0の形のfloatを投げるとintegerになって帰ってくる' do
+      actual = simple_num(1.0).to_s
+      expect(actual).to eq '1'
+      expect(actual).not_to eq '1.0'
+    end
+
+    it 'n.0でない形のfloatを投げるとそのまま帰ってくる' do
+      expect(simple_num 1.5).to eq 1.5
+    end
+  end
 end

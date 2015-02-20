@@ -5,6 +5,7 @@ class EffortsController < ApplicationController
 
   def show
     @effort = Effort.find params['id']
+    @sum = History.where(effort: @effort).map{ |effort| effort.quantity }.inject(0){ |sum, n| sum + n }
   end
 
   def new
